@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView_Title"
+        android:layout_width="239dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="40dp"
+        android:text="SPEED CALCULATOR"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1000:625"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/speed_meter" />
+
+    <EditText
+        android:id="@+id/editText_t"
+        android:layout_width="210dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="64dp"
+        android:background="@android:color/darker_gray"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="@string/distance"
+        android:textColor="@android:color/tertiary_text_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Title" />
+
+    <EditText
+        android:id="@+id/editText_s"
+        android:layout_width="209dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:color/darker_gray"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="@string/second"
+        android:textColor="@android:color/tertiary_text_light"
+        app:layout_constraintEnd_toEndOf="@+id/editText_t"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/editText_t"
+        app:layout_constraintTop_toBottomOf="@+id/editText_t" />
+
+    <Button
+        android:id="@+id/button_cal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="4dp"
+        android:text="@string/cal"
+        app:layout_constraintEnd_toEndOf="@+id/editText_s"
+        app:layout_constraintTop_toBottomOf="@+id/editText_s" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="@string/ave"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/editText_s"
+        app:layout_constraintHorizontal_bias="0.413"
+        app:layout_constraintStart_toStartOf="@+id/editText_s"
+        app:layout_constraintTop_toBottomOf="@+id/editText_s" />
+
+    <TextView
+        android:id="@+id/textView_A"
+        android:layout_width="204dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/background_light"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/editText_s"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText_s"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/button_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/clear"
+        app:layout_constraintEnd_toStartOf="@+id/button_cal"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="@+id/editText_s"
+        app:layout_constraintTop_toBottomOf="@+id/editText_s" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
